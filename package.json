@@ -1,0 +1,87 @@
+{
+  "name": "@youngapp/yap-cli",
+  "version": "1.0.2",
+  "description": "Yap CLI",
+  "license": "Apache-2.0",
+  "licenses": [
+    {
+      "type": "Apache-2.0",
+      "url": "http://www.apache.org/licenses/LICENSE-2.0"
+    }
+  ],
+  "bin": {
+    "yap-api-test": "dist/apitest/index.js"
+  },
+  "directories": {
+    "doc": "docs"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "files": [
+    "dist",
+    "docs",
+    "LICENSE",
+    "README.md",
+    "package.json"
+  ],
+  "scripts": {
+    "build": "rm -rf dist && ./node_modules/.bin/tsc",
+    "test": "ENV=local mocha -r ts-node/register test/**/*.test.ts  --timeout 30000 --watch-extensions ts --watch",
+    "test:integration": "nyc mocha -r ts-node/register test/**/*.test.ts",
+    "lint": "tslint -c tslint.json -p tsconfig.json --fix",
+    "coverage": "nyc report --reporter=text-lcov",
+    "release": "standard-version  --no-verify --commit-all --release-as minor --git-tag-fallback false"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/youngapp/yap-cli.git"
+  },
+  "keywords": [
+    "youngapp",
+    "core",
+    "cli"
+  ],
+  "author": "Oleksandr Koreniuk",
+  "bugs": {
+    "url": "https://github.com/youngapp/yap-cli/issues"
+  },
+  "homepage": "https://github.com/youngapp/yap-cli#readme",
+  "husky": {
+    "hooks": {
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
+    }
+  },
+  "standard-version": {
+    "scripts": {
+      "postbump": "git add package.json",
+      "precommit": "echo \"chore(release): [skip ci]\""
+    }
+  },
+  "dependencies": {
+    "@types/faker": "^4.1.9",
+    "@types/glob": "^7.1.1",
+    "@types/js-yaml": "^3.12.1",
+    "@types/lodash": "^4.14.149",
+    "@types/mocha": "^5.2.7",
+    "@types/node": "^13.1.6",
+    "faker": "^4.1.0",
+    "glob": "^7.1.6",
+    "js-yaml": "^3.13.1",
+    "lodash": "^4.17.15",
+    "mocha": "^7.0.0"
+  },
+  "devDependencies": {
+    "@types/sinon": "^7.5.1",
+    "commitlint": "^8.3.4",
+    "husky": "^4.0.7",
+    "nyc": "^15.0.0",
+    "sinon": "^8.0.4",
+    "ts-node": "^8.6.2",
+    "tsc": "^1.20150623.0",
+    "tslint": "^5.20.1",
+    "typescript": "^3.7.4"
+  }
+}
