@@ -1,0 +1,42 @@
+{
+  "name": "name",
+  "version": "1.0.0",
+  "description": "My Yap lambda server",
+  "main": "dist/src/handlerjs",
+  "types": "dist/src/handler.d.ts",
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/"
+  },
+  "files": [
+    "dist",
+    "package.json"
+  ],
+  "scripts": {
+    "local": "sls offline",
+    "test": "ENV=local mocha -r ts-node/register test/**/*.test.ts  --timeout 30000 --watch-extensions ts --watch",
+    "test:integration": "nyc mocha -r ts-node/register test/**/*.ts",
+    "lint": "tslint -c tslint.json -p tsconfig.json --fix",
+    "build": "rm -rf dist && tsc && cp src/policies.xml dist/policies.xml && cp src/definitions.graphql dist/definitions.graphql",
+    "coverage": "nyc report --reporter=text-lcov",
+    "release": "standard-version  --no-verify --commit-all --release-as minor --git-tag-fallback false"
+  },
+  "devDependencies": {
+    "@types/assert": "^1.4.3",
+    "@types/mocha": "^5.2.7",
+    "@types/sinon": "^7.5.1",
+    "mocha": "^6.2.2",
+    "nyc": "^15.0.0",
+    "serverless-offline": "^5.12.1",
+    "sinon": "^7.5.0",
+    "ts-node": "^8.5.4",
+    "tslint": "^5.12.0",
+    "typescript": "^3.7.3"
+  },
+  "dependencies": {
+    "@types/node": "^12.12.17",
+    "@youngapp/yap": "^1.15.0",
+    "apollo-server-lambda": "^2.9.15",
+    "aws-lambda": "^0.1.2",
+    "aws-sdk": "^2.590.0"
+  }
+}
