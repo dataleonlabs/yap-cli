@@ -1,0 +1,5 @@
+ <policies>
+    <inbound>
+        <console-log-request/>
+    </inbound>
+</policies>

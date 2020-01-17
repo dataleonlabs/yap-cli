@@ -30,9 +30,11 @@ export const executeInString = (field: string, executionContext?: any) => {
  * @param context Execution context
  */
 export const propertiesExecutor = (object: any, context: any): void => {
-    for (const [key, value] of Object.entries(object)) {
-        if (value && typeof value === 'string') {
-            set(object, `${key}`, executeInString(value as string, context));
+    if (object) {
+        for (const [key, value] of Object.entries(object)) {
+            if (value && typeof value === 'string') {
+                set(object, `${key}`, executeInString(value as string, context));
+            }
         }
     }
     return object;

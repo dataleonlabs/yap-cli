@@ -1,0 +1,2 @@
+type Query { fields: [Field] }
+type Field { id: String, data: String }

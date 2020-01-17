@@ -10,7 +10,8 @@
     }
   ],
   "bin": {
-    "yap-api-test": "dist/apitest/index.js"
+    "yap-api-test": "dist/apitest/index.js",
+    "yap-create-project": "dist/createproject/index.js"
   },
   "directories": {
     "doc": "docs"
@@ -28,7 +29,7 @@
     "package.json"
   ],
   "scripts": {
-    "build": "rm -rf dist && ./node_modules/.bin/tsc",
+    "build": "rm -rf dist && ./node_modules/.bin/tsc && cp -r ./src/createproject/projectstructure ./dist/createproject/projectstructure ",
     "test": "ENV=local mocha -r ts-node/register test/**/*.test.ts  --timeout 30000 --watch-extensions ts --watch",
     "test:integration": "nyc mocha -r ts-node/register test/**/*.test.ts",
     "lint": "tslint -c tslint.json -p tsconfig.json --fix",
@@ -66,12 +67,16 @@
     "@types/js-yaml": "^3.12.1",
     "@types/lodash": "^4.14.149",
     "@types/mocha": "^5.2.7",
+    "@types/ncp": "^2.0.3",
     "@types/node": "^13.1.6",
+    "@types/rimraf": "^2.0.3",
     "faker": "^4.1.0",
     "glob": "^7.1.6",
     "js-yaml": "^3.13.1",
     "lodash": "^4.17.15",
-    "mocha": "^7.0.0"
+    "mocha": "^7.0.0",
+    "ncp": "^2.0.0",
+    "rimraf": "^3.0.0"
   },
   "devDependencies": {
     "@types/sinon": "^7.5.1",
