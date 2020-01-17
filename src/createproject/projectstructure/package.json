@@ -14,6 +14,7 @@
   "scripts": {
     "local": "sls offline",
     "test": "ENV=local mocha -r ts-node/register test/**/*.test.ts  --timeout 30000 --watch-extensions ts --watch",
+    "test:api": "yarn build && yap-test ./dist/api.js  ./test/*.yml",
     "test:integration": "nyc mocha -r ts-node/register test/**/*.ts",
     "lint": "tslint -c tslint.json -p tsconfig.json --fix",
     "build": "rm -rf dist && tsc && cp src/policies.xml dist/policies.xml && cp src/definitions.graphql dist/definitions.graphql",
