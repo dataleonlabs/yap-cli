@@ -21,4 +21,11 @@ describe("Execution tool test", () => {
         const expected = { a: "cat", b: "dog" };
         deepEqual(propertiesExecutor(object, context), expected);
     });
+
+    it("Properties executor should not execute if object is null", () => {
+        const object = null;
+        const context = { aVal: "cat", bVal: "dog" };
+        const expected = null;
+        deepEqual(propertiesExecutor(object, context), expected);
+    });
 });
