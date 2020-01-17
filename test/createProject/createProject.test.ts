@@ -1,12 +1,15 @@
 import assert from 'assert';
-import rmrf from 'rimraf';
+import child_process from 'child_process';
 import { readFileSync } from 'fs';
 import { join } from 'path';
+import rmrf from 'rimraf';
 import createProject from '../../src/createproject/createProject';
 
-describe("Create app launcher", () => {
+describe("Create app launcher", function() {
 
-    it.skip("Should create project folder in default folder", async () => {
+    this.timeout(5000);
+
+    it("Should create project folder in default folder", async () => {
         const setArgs = [
             "",
             "",
@@ -26,5 +29,5 @@ describe("Create app launcher", () => {
     afterEach(async () => {
         const currentDir = process.cwd();
         rmrf.sync(`${currentDir}/myYapApp`);
-    })
+    });
 });
