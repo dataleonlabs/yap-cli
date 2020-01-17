@@ -15,7 +15,7 @@ const { apiclass, testcases } = global;
 if (!apiclass || !testcases) {
     throw new Error("apiclass && testcases env variables should be set");
 } else {
-    const { testApi } = require(resolve(process.cwd(), apiclass));
+    const testApi = require(resolve(process.cwd(), apiclass)).default;
     const testCasesFullPath = resolve(process.cwd(), testcases);
     const testDir = dirname(testCasesFullPath);
     const testPattern = basename(testCasesFullPath) || '*.yml';
@@ -34,7 +34,7 @@ if (!apiclass || !testcases) {
                     const testDataContext = { faker, variables };
                     propertiesExecutor(scenarioRequest, testDataContext);
                     const request = { ...getTestRequest(), ...scenarioRequest };
-                    const response = await apiInstance.handle(request, getTestAwsContext());
+                    const response = await apiInstance.handler(request, getTestAwsContext());
                     propertiesExecutor(response, testDataContext);
                     set(testDataContext, 'response', response);
                     for (const assert of Object.values(scenarioValue.tests)) {

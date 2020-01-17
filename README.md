@@ -20,6 +20,14 @@ Tests should run in mocha execution environment, and with default reporter so yo
 Api class should implement handle method which confines to AWS lambda handler signature
 You can read more about youngapp yml testing here https://manual.youngapp.co/community-edition/functional-testing
 
+### Create project
+
+```npx -p @youngapp/yap-cli yap-create-project myProject```
+
+Creates project template for your serverless function, which will use Yap core as method router
+CLI Receives one argument
+* folder name for your project. Default: myYapApp
+
 ### Connectors
 API management is the process of creating and publishing web application programming interfaces (APIs), enforcing their usage policies, controlling access, nurturing subscriber communities, collecting and analyzing usage statistics, and reporting performance.
 

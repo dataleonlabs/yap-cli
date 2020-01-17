@@ -1,0 +1,34 @@
+service: api-gateway
+
+plugins:
+  - serverless-offline
+
+custom:
+  prune:
+    automatic: true
+    number: 30
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+
+
+functions:
+  api:
+    handler: dist/handler.handler
+    name: YAPAPIGateway-${opt:stage, 'dev'}
+    events:
+      - http:
+          path: / 
+          method: ANY
+          cors: false
+
+      - http:
+          path: /{any+}
+          method: ANY
+          cors: false
+
+    # Define function environment variables here
+    environment:
+      ENV: ${'dev'}
+      REGION: ${'eu-east-1'}

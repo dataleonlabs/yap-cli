@@ -1,0 +1,24 @@
+version: 1.0.0
+info:
+  title: Sample API BDD Testing
+  description: Optional multiline or single-line description in [CommonMark](http://commonmark.org/help/) or HTML.
+  version: 0.1.9
+
+scenarios:
+  hello:
+    describe: U-TEST-1 loads posts data.
+    variables:
+        expectedResponse:
+            data:
+                fields:
+                    - - id: 1
+                      - data: "first"
+                    - - id: 2
+                      - data: "second"
+    request:
+      path: /    
+      httpMethod: POST
+      body: '{ "query": "query fields{ fields { id, data } }" }'
+    tests:
+      - - expect: '@(JSON.parse(response.body).data)'
+        - toEqual: '@(variables.expectedResponse)'
