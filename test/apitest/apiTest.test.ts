@@ -38,7 +38,7 @@ describe("API test launcher", () => {
 
         apiTest(setArgs);
 
-        assert.equal(global.apiclass, 'dist/src/index.js');
+        assert.equal(global.apiclass, 'dist/api.js');
         assert.equal(global.testcases, setArgs[0]);
 
         assert(mochaRunStub.calledOnce);

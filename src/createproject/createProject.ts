@@ -1,6 +1,6 @@
 import { mkdir } from 'fs';
-import { ncp } from 'ncp';
 import mv from 'mv';
+import { ncp } from 'ncp';
 import { join } from 'path';
 import { promisify } from 'util';
 

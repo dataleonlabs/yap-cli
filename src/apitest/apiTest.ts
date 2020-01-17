@@ -13,7 +13,7 @@ export default function apiTest(args:string[]) {
         global.apiclass = args[0];
         global.testcases = args[1];
     } else {
-        global.apiclass = 'dist/src/index.js';
+        global.apiclass = 'dist/api.js';
         global.testcases = args[0];
     }
     mocha.addFile(
