@@ -31,8 +31,8 @@ jobs:
         nyc check-coverage --lines 95 --functions 95 --branches 85 --statements 95
         yarn coverage
         yarn build
-        cd ./dist/createproject/projectstructure
-        ls -la 
+        echo "//registry.npmjs.org/:_authToken=$NODE_AUTH_TOKEN" >> ~/.npmrc
+        npm publish --access public
       env:
         CI: true
         NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

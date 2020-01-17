@@ -1,6 +1,6 @@
 {
   "name": "@youngapp/yap-cli",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Yap CLI",
   "license": "Apache-2.0",
   "licenses": [
@@ -23,6 +23,7 @@
   },
   "files": [
     "dist",
+    "dist/createproject/projectstructure",
     "docs",
     "LICENSE",
     "README.md",
