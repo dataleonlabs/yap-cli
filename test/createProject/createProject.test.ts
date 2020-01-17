@@ -17,7 +17,7 @@ describe("Create app launcher", function() {
         const oldArgv = process.argv;
         process.argv = setArgs;
         await createProject();
-        const oldPackageJson = readFileSync(join(__dirname, '../../src/createproject/projectstructure/package.json')).toString();
+        const oldPackageJson = readFileSync(join(__dirname, '../../src/createproject/projectstructure/pkg.json')).toString();
         const newPackageJson = readFileSync(join(__dirname, '../../myYapApp/package.json')).toString();
 
         //just check if package.json persist
