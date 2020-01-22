@@ -1,5 +1,4 @@
-import { Connector, Context, YapConnector } from "@youngapp/yap";
-import { ConnectorCategory } from "@youngapp/yap/dist/src/connectors/connector";
+import { Connector, ConnectorCategory, Context, YapConnector } from "@youngapp/yap";
 
 const dataToReturn = [
     {
