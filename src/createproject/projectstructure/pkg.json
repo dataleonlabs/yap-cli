@@ -35,7 +35,7 @@
   },
   "dependencies": {
     "@types/node": "^12.12.17",
-    "@youngapp/yap": "^1.18.0",
+    "@youngapp/yap": "^1.20.0",
     "apollo-server-lambda": "^2.9.15",
     "aws-lambda": "^0.1.2",
     "aws-sdk": "^2.590.0"
