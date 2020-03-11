@@ -5,8 +5,7 @@ Command line tool for youngapp ecosystem.
 AWS's serverless Lambda functions open a world of possibilities for running on-demand, server-side code without having to run a dedicated server. However, managing service discovery, configuring API gateways, and coordinating deployments between your app and your serverless functions can quickly become overwhelming. This document will help you get started with Connector Functions on Serverless.
 
 ### Create project
-
-```npx -p @youngapp/yap-cli create myProject```
+```npx -p @youngapp/yap-cli create my-api```
 
 Creates project template for your serverless function, which will use Yap core as method router
 CLI Receives one argument
@@ -34,14 +33,13 @@ You can read more about youngapp yml testing here https://manual.youngapp.co/com
 API management is the process of creating and publishing web application programming interfaces (APIs), enforcing their usage policies, controlling access, nurturing subscriber communities, collecting and analyzing usage statistics, and reporting performance.
 
 #### Custom Connector
-Follow instructions to create a custom connector with [create-yap-connector](https://manual.youngapp.co/community-edition/custom/how-do-i-create-a-connector)
+Follow instructions to create a [custom connector](https://manual.youngapp.co/community-edition/custom/how-do-i-create-a-connector)
 
 ### Policy
 Policies are applied inside the gateway which sits between the API consumer and the managed API. The gateway receives all requests and usually forwards them unaltered to the underlying API. However a policy can apply changes to both the inbound request and outbound response.
 
 #### Custom Policies
-Follow instructions to create a custom policy with [create-yap-policy](https://manual.youngapp.co/community-edition/custom/how-to-create-a-policy)
-
+Follow instructions to create a [custom policy](https://manual.youngapp.co/community-edition/custom/how-to-create-a-policy)
 
 ## Opening issues
 If you encounter a bug with YAP, we would appreciate if you inform us about it. 
