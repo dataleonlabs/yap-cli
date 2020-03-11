@@ -10,8 +10,8 @@
     }
   ],
   "bin": {
-    "yap-api-test": "dist/apitest/index.js",
-    "yap-create-project": "dist/createproject/index.js"
+    "test": "dist/apitest/index.js",
+    "create": "dist/createproject/index.js"
   },
   "directories": {
     "doc": "docs"
