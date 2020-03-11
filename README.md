@@ -6,10 +6,11 @@ AWS's serverless Lambda functions open a world of possibilities for running on-d
 
 
 ### Test API
+With Yap you're able to predefine a very well structured test YAML file once, and every time you make any changes to your API you can test it with just one command in your terminal.
 
-```npx -p @youngapp/yap-cli test apiTestDefinitions/*.yml```
+```npx -p @youngapp/yap-cli test specs/*.yml```
 
-```npx -p @youngapp/yap-cli test dist/src/index.js apiTestDefinitions/*.yml```
+```npx -p @youngapp/yap-cli test dist/src/index.js specs/*.yml```
 
 Runs yaml tests for your implemented api class
 CLI Receives two arguments: 
