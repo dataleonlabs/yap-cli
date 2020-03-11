@@ -9,7 +9,7 @@ AWS's serverless Lambda functions open a world of possibilities for running on-d
 
 Creates project template for your serverless function, which will use Yap core as method router
 CLI Receives one argument
-* folder name for your project. Default: myYapApp
+* folder name for your project. Default: my-api
 
 
 ### Testing specifications
