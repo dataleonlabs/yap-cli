@@ -1,13 +1,11 @@
 # YAP command line interface
-Command line tool for youngapp ecosystem.
-
-## Introduction
-AWS's serverless Lambda functions open a world of possibilities for running on-demand, server-side code without having to run a dedicated server. However, managing service discovery, configuring API gateways, and coordinating deployments between your app and your serverless functions can quickly become overwhelming. This document will help you get started with Connector Functions on Serverless.
+Command line tool for YAP ecosystem.
 
 ### Create project
+Creates project template for your serverless function, which will use Yap core as method router
+
 ```npx -p @youngapp/yap-cli create my-api```
 
-Creates project template for your serverless function, which will use Yap core as method router
 CLI Receives one argument
 * folder name for your project. Default: my-api
 
@@ -16,8 +14,6 @@ CLI Receives one argument
 With Yap you're able to predefine a very well structured test YAML file once, and every time you make any changes to your API you can test it with just one command in your terminal.
 
 ```npx -p @youngapp/yap-cli test specs/*.yml```
-
-```npx -p @youngapp/yap-cli test dist/src/index.js specs/*.yml```
 
 Runs yaml tests for your implemented api class
 CLI Receives two arguments: 
