@@ -8,6 +8,7 @@ AWS's serverless Lambda functions open a world of possibilities for running on-d
 ### Test API
 
 ```npx -p @youngapp/yap-cli test apiTestDefinitions/*.yml```
+
 ```npx -p @youngapp/yap-cli test dist/src/index.js apiTestDefinitions/*.yml```
 
 Runs yaml tests for your implemented api class
