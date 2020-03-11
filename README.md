@@ -7,8 +7,8 @@ AWS's serverless Lambda functions open a world of possibilities for running on-d
 
 ### Test API
 
-```npx -p @youngapp/yap-cli yap-api-test apiTestDefinitions/*.yml```
-```npx -p @youngapp/yap-cli yap-api-test dist/src/index.js apiTestDefinitions/*.yml```
+```npx -p @youngapp/yap-cli test apiTestDefinitions/*.yml```
+```npx -p @youngapp/yap-cli test dist/src/index.js apiTestDefinitions/*.yml```
 
 Runs yaml tests for your implemented api class
 CLI Receives two arguments: 
@@ -22,7 +22,7 @@ You can read more about youngapp yml testing here https://manual.youngapp.co/com
 
 ### Create project
 
-```npx -p @youngapp/yap-cli yap-create-project myProject```
+```npx -p @youngapp/yap-cli create myProject```
 
 Creates project template for your serverless function, which will use Yap core as method router
 CLI Receives one argument
@@ -32,13 +32,13 @@ CLI Receives one argument
 API management is the process of creating and publishing web application programming interfaces (APIs), enforcing their usage policies, controlling access, nurturing subscriber communities, collecting and analyzing usage statistics, and reporting performance.
 
 #### Custom Connector
-Follow instructions to create a custom connector with [create-yap-connector](https://github.com/youngapp/create-yap/blob/master/docs/connector.md)
+Follow instructions to create a custom connector with [create-yap-connector](https://manual.youngapp.co/community-edition/custom/how-do-i-create-a-connector)
 
 ### Policy
 Policies are applied inside the gateway which sits between the API consumer and the managed API. The gateway receives all requests and usually forwards them unaltered to the underlying API. However a policy can apply changes to both the inbound request and outbound response.
 
 #### Custom Policies
-Follow instructions to create a custom policy with [create-yap-policy](https://github.com/youngapp/create-yap/blob/master/docs/policy.md)
+Follow instructions to create a custom policy with [create-yap-policy](https://manual.youngapp.co/community-edition/custom/how-to-create-a-policy)
 
 
 ## Opening issues
