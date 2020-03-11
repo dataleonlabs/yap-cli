@@ -4,8 +4,16 @@ Command line tool for youngapp ecosystem.
 ## Introduction
 AWS's serverless Lambda functions open a world of possibilities for running on-demand, server-side code without having to run a dedicated server. However, managing service discovery, configuring API gateways, and coordinating deployments between your app and your serverless functions can quickly become overwhelming. This document will help you get started with Connector Functions on Serverless.
 
+### Create project
 
-### Test API
+```npx -p @youngapp/yap-cli create myProject```
+
+Creates project template for your serverless function, which will use Yap core as method router
+CLI Receives one argument
+* folder name for your project. Default: myYapApp
+
+
+### Testing specifications
 With Yap you're able to predefine a very well structured test YAML file once, and every time you make any changes to your API you can test it with just one command in your terminal.
 
 ```npx -p @youngapp/yap-cli test specs/*.yml```
@@ -21,14 +29,6 @@ Tests should run in mocha execution environment, and with default reporter so yo
 
 Api class should implement handle method which confines to AWS lambda handler signature
 You can read more about youngapp yml testing here https://manual.youngapp.co/community-edition/functional-testing
-
-### Create project
-
-```npx -p @youngapp/yap-cli create myProject```
-
-Creates project template for your serverless function, which will use Yap core as method router
-CLI Receives one argument
-* folder name for your project. Default: myYapApp
 
 ### Connectors
 API management is the process of creating and publishing web application programming interfaces (APIs), enforcing their usage policies, controlling access, nurturing subscriber communities, collecting and analyzing usage statistics, and reporting performance.
