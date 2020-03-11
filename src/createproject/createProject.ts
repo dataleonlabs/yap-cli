@@ -10,7 +10,7 @@ const commpandPrompt = `curl -i \
 -X POST -d '{ "query": "query fields{ fields { id, data } }" }' \
 http://localhost:3000`;
 
-const createProject = async (projectName: string = "myYapApp") => {
+const createProject = async (projectName: string = "my-api") => {
     const args = process.argv.slice(2);
     const sourcedir = join(__dirname, './projectstructure');
     const currentDir = `${process.cwd()}/${projectName}`;
